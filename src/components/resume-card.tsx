@@ -1,12 +1,9 @@
-"use client";
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 interface ResumeCardProps {
@@ -39,8 +36,10 @@ export const ResumeCard = ({
   };
 
   return (
-    <Link
+    <a
       href={href || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
       className="block cursor-pointer"
       onClick={handleClick}
     >
@@ -105,6 +104,6 @@ export const ResumeCard = ({
           )}
         </div>
       </Card>
-    </Link>
+    </a>
   );
 };

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -21,7 +21,7 @@ export default function Navbar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={item.href}
+                  to={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
@@ -43,15 +43,17 @@ export default function Navbar() {
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
+                  <a
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
                     )}
                   >
                     <social.icon className="size-4" />
-                  </Link>
+                  </a>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{social.name}</p>

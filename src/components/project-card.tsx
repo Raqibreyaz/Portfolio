@@ -7,8 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
 import Markdown from "react-markdown";
 
 interface Props {
@@ -46,8 +44,10 @@ export function ProjectCard({
         "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
-      <Link
+      <a
         href={href || "#"}
+        target="_blank"
+        rel="noopener noreferrer"
         className={cn("block cursor-pointer", className)}
       >
         {video && (
@@ -61,15 +61,13 @@ export function ProjectCard({
           />
         )}
         {image && (
-          <Image
+          <img
             src={image}
             alt={title}
-            width={500}
-            height={300}
             className="h-40 w-full object-cover overflow-hidden object-top"
           />
         )}
-      </Link>
+      </a>
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
@@ -101,12 +99,17 @@ export function ProjectCard({
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
+              <a
+                href={link?.href}
+                key={idx}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
                   {link.icon}
                   {link.type}
                 </Badge>
-              </Link>
+              </a>
             ))}
           </div>
         )}

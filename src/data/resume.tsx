@@ -8,19 +8,20 @@ export const DATA = {
   location: "Varanasi, India",
   locationLink: "https://www.google.com/maps/place/varanasi",
   description:
-    "Full Stack Developer with a System Programming Core — building from frontend to the kernel",
-  summary:
-    "I'm a full stack developer with a strong foundation in C++, operating systems, and low-level networking. From building intuitive UIs with React to engineering performant backends and writing custom file sync or proxy servers in C/C++, I love creating end-to-end systems that are both user-friendly and deeply optimized. I believe in understanding things from the metal up — whether it's browser-side rendering or socket-level data transfer.",
+    "Backend-focused Software Engineer | Building reliable systems and cloud products",
+  summary: `I build backend systems and cloud products with Node.js, AWS, Linux, and C/C++. I’m especially interested in scalable architecture, storage systems, and the low-level details that make software reliable. 
+  
+  I enjoy turning ideas into working systems and learning deeply from the process. I’m looking for backend, cloud, and systems roles where I can contribute to real products and keep improving as an engineer..`,
   avatarUrl: "/Raquib Reyaz.jpeg",
   skills: [
     "Typescript",
-    "C/C++",
-    "React",
-    "Next.js",
     "Node.js",
-    "Python",
+    "Redis",
+    "AWS",
+    "CI/CD",
     "MongoDB",
     "PostgreSQL",
+    "React",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -88,9 +89,42 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Storra",
+      href: "https://storra.netlify.app",
+      // dates: "May 2024 - Aug 2024",
+      active: true,
+      description:
+        "Storra is a cloud file storage app with hierarchical file management, direct S3 uploads and streaming, recursive folder operations, and subscription-based storage.",
+      technologies: [
+        "Node.js",
+        "Redis",
+        "Amazon S3",
+        "Cloudfront CDN",
+        "Express.js",
+        "MongoDB",
+        "Emailing System",
+        "Razorpay",
+        "React.js",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://storra.netlify.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Raqibreyaz/Storra",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/Storra.png",
+      video: "",
+    },
+    {
       title: "Banaras Mart",
       href: "https://banaras-mart.vercel.app/",
-      dates: "May 2024 - Aug 2024",
+      // dates: "May 2024 - Aug 2024",
       active: true,
       description:
         "Banaras Mart — your go-to online store for elegant women's fashion! Seamlessly shop with cash on delivery or Razorpay, manage orders, wishlist favorites, and track returns. Powerful dashboards for sellers and admins, real-time sales charts, and secure login flows make this a complete, stylish, and user-friendly e-commerce experience.",
@@ -113,108 +147,11 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/Raqibreyaz/Banaras-Mart-Backend",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/Raqibreyaz/Banaras-Mart-Frontend",
+          href: "https://github.com/Raqibreyaz/Banaras-Mart",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/banaras-mart.png",
-      video: "",
-    },
-    {
-      title: "ProxyRaQ",
-      href: "https://youtu.be/sULLf803qwQ",
-      dates: "Feb 2025 - July 2025",
-      active: true,
-      description:
-        "Developed a multi-threaded HTTP/HTTPS proxy server using POSIX threads, sockets, and OpenSSL for secure SSL tunneling.Load tested with 10K requests @ 100 concurrent clients over real content (1.2KB per request), sustaining 3150+ req/sec, 0% failure, and ~4MB/sec throughput",
-      technologies: [
-        "C",
-        "Sockets",
-        "HTTP Parsing",
-        "Posix Threads",
-        "Thread Pool",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Raqibreyaz/Multithreaded-Proxy-Web-Server-With-Cache",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Demo",
-          href: "https://youtu.be/sULLf803qwQ",
-          icon: <Icons.youtube className="size-3" />,
-        },
-      ],
-      image: "/code.jpg",
-      video: "",
-    },
-    {
-      title: "Finance Manager",
-      href: "https://finance-manager-raqib.vercel.app/",
-      dates: "Oct 2024 - Oct 2024",
-      active: true,
-      description:
-        "Finance Manager - a sleek PWA that tracks your income, expenses, and savings with precision. Filter by payee, category, or account; generate insightful reports with charts; and manage multiple accounts effortlessly. Built with Next.js, TypeScript, and PostgreSQL — it’s your personal finance dashboard, anytime, anywhere. ",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Drizzle",
-        "Hono.js",
-        "TailwindCSS",
-        "Shadcn",
-        "Zustand",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://finance-manager-raqib.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/Raqibreyaz/Finance-Manager",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/Finance-Manager.png",
-      video: "",
-    },
-    {
-      title: "Synclet",
-      href: "https://youtu.be/t_7HGiFl3x0",
-      dates: "May 2025 - July 2025",
-      active: true,
-      description:
-        "Tired of constant polling? So were we. Tired of syncing whole files just because 2 bytes changed? Same here. Synclet is built to sync files precisely, using content-defined chunking, event-driven notifications, and peer-based snapshots, all without wasting cycles.",
-      technologies: [
-        "C++",
-        "Inotify",
-        "Epoll",
-        "Content-Defined-Chunking",
-        "Rolling Hash",
-        "SHA-256",
-        "Custom Protocol",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Raqibreyaz/Synclet",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Demo",
-          href: "https://youtu.be/t_7HGiFl3x0",
-          icon: <Icons.youtube className="size-3" />,
-        },
-      ],
-      image: "/sync.jpg",
       video: "",
     },
   ],

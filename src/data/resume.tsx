@@ -122,6 +122,30 @@ export const DATA = {
       video: "",
     },
     {
+      title: "ShipIt",
+      href: "https://github.com/Raqibreyaz/ShipIt-Self-Hoster-CI-CD-Server",
+      // dates: "May 2024 - Aug 2024",
+      active: true,
+      description:
+        "A self-hosted CI/CD server that deploys on push via GitHub webhooks, supports smart dependency detection, automatic rollback on unhealthy deploys, and delivers frontend to S3 + CloudFront — all without GitHub Actions.",
+      technologies: [
+        "Node.js",
+        "Redis",
+        "Express.js",
+        "Telegram",
+        "Github Webhooks",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Raqibreyaz/ShipIt-Self-Hoster-CI-CD-Server",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/ci-cd.jpg",
+      video: "",
+    },
+    {
       title: "Banaras Mart",
       href: "https://banaras-mart.vercel.app/",
       // dates: "May 2024 - Aug 2024",

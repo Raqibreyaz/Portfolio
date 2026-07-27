@@ -90,7 +90,7 @@ export const DATA = {
   projects: [
     {
       title: "Storra",
-      href: "https://storra.netlify.app",
+      href: "https://storra.raquibreyaz.in",
       // dates: "May 2024 - Aug 2024",
       active: true,
       description:
@@ -109,7 +109,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://storra.netlify.app",
+          href: "https://storra.raquibreyaz.in",
           icon: <Icons.globe className="size-3" />,
         },
         {

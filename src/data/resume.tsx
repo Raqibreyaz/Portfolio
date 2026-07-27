@@ -33,14 +33,14 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/raqibreyaz",
+        url: "https://github.com/Raqibreyaz",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/raqibreyaz",
+        url: "https://www.linkedin.com/in/raquibreyaz",
         icon: Icons.linkedin,
 
         navbar: true,
@@ -54,7 +54,7 @@ export const DATA = {
       },
       Youtube: {
         name: "Youtube",
-        url: "https://www.youtube.com/@codin7367",
+        url: "https://www.youtube.com/channel/UCrCLdgjQK5bEQFcs2Zc7Ppw",
         icon: Icons.youtube,
         navbar: true,
       },
